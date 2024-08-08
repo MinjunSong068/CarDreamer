@@ -44,7 +44,7 @@ launch_carla() {
 
 # Function to start the training script
 start_training() {
-  launch_carla
+  # launch_carla
   # Start the training script and capture its PID
   CUDA_VISIBLE_DEVICES=$GPU_DEVICE $TRAINING_COMMAND >> $LOG_FILE 2>&1 &
   TRAINING_PID=$!
@@ -76,7 +76,7 @@ while true; do
     start_training
   fi
   # Check if CARLA server needs to be restarted
-  launch_carla
+  # launch_carla
   # Check every minute
   sleep 60
 done
